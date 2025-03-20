@@ -1,0 +1,134 @@
+/* *{
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+body{
+    background-color: #555;
+}
+h2{
+    color: white;
+}
+
+.faq-accordian{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item{
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    
+}
+.faq-item-header{
+    background-color: #f7f7f7;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease;
+
+
+}
+.faq-item-header:hover{
+    background-color: #e0e0e0;
+
+}
+.faq-item-body{
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    
+
+}
+.faq-item-body-content{
+    /* margin-top: 10px; */
+    /* color: #555; */
+    /* padding: 15px; */
+/* } */
+
+/* handle the animation using use state */
+/* .faq-item.active .faq-item-body{ */
+    /* max-height: 300px; */
+/* } 
+ */
+
+
+
+
+ /* Base Styling */
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Accordion Styles */
+.faq-accordian {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active {
+    transform: scale(1.02);
+}
+
+.faq-item-header {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item-header:hover {
+    background: #444;
+}
+
+.faq-item-body {
+    background: rgba(255, 255, 255, 0.8);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.faq-item-body-content {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Active Item Animation */
+.faq-item.active .faq-item-body {
+    max-height: 300px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search"> 
+            <input type="text" placeholder="enter your city" spellcheck="false">
+            <button class="secbtn"> <img src="./searchbtn.png" alt=""></button>
+
+
+
+        </div>
+        <!-- if wrong data is enter want to display error message -->
+         <div class="error">
+            <p>Invalid city Name</p>
+         </div>
+
+        <div class="weather">
+            <img src="./suncloud1.png" class="weather-icon">
+            <h1 class="temp">28°C</h1>
+            <h2 class="city">Coimbatore</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./humidity.jpeg" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+
+                <!-- for wind -->
+                <div class="col">
+                    <img src="./wind.jpeg" alt="">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const apikey="92789ded518c4f5af7069b8e91ff0ce1";
+        const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+        const searchbox=document.querySelector(".search input");
+        const searchbtn=document.querySelector(".search button");
+        const weathericon=document.querySelector(".weather-icon");
+        async function checkWeather(city) {
+            const response=await fetch(apiurl + city+`&appid=${apikey}`);
+            if(response.status==404){
+                document.querySelector(".error").style.display="block";
+                // document.querySelector(".weather").style.display="none";
+            }
+
+            // if all the details are correct
+            else{
+
+
+                var data=await response.json();
+            // to display in console
+            console.log(data);
+
+            // using the api names and match with html tags
+            document.querySelector(".city").innerHTML=data.name;
+            document.querySelector(".temp").innerHTML= Math.round(data.main.temp)+ "°C";
+            document.querySelector(".humidity").innerHTML=data.main.humidity +"%";
+            document.querySelector(".wind").innerHTML=data.wind.speed+"km/hr";
+
+
+            // according to weather it will display the image
+            if(data.weather[0].main =="Clouds"){
+                weathericon.src="images/cloudyy.png";
+            }
+            else if(data.weather[0].main=="Clear"){
+                weathericon.src="images/clear.png";
+
+            }
+            else if(data.weather[0].main="Rain"){
+                weathericon.src="images/rain.jpeg";
+            }
+            else if(data.weather[0].main=="Drizzle"){
+                weathericon.src="images/drizzle.jpeg";
+            }
+            else if(data.weather[0].main=="Mist"){
+                weathericon.src="images/mist.jpeg";
+            }
+
+            // if its is correct the error message wiil delete
+            document.querySelector(".error").style.display="none";
+
+
+
+
+
+
+
+
+            }
+
+
+            
+            
+        }
+
+        // this is the function to check the input is given or not in search box
+        searchbtn.addEventListener("click",()=>{
+            checkWeather(searchbox.value);
+        })
+
+        checkWeather();
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+nav {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 1rem; /* Add some padding to make it look better */
+    color: white; /* White text for better contrast */
+    display: flex;
+    justify-content: space-between; /* Align content to both ends */
+    align-items: center; /* Center items vertically */
+  }
+  
+  nav h1 {
+    font-size: 1.5rem; /* Size for the navbar title */
+    font-weight: bold; /* Make the title bold */
+    color: #ffcc00; /* Highlighted color for the title */
+    margin: 0; /* Remove any default margins */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove bullet points from the list */
+    display: flex; /* Align links horizontally */
+    gap: 1.5rem; /* Add space between links */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+  }
+  
+  nav ul a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    font-size: 1rem; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  nav ul a:hover {
+    color: #ffcc00; /* Highlight link on hover */
+  }
+  
+  nav ul a:active {
+    color: #ff9900; /* Slightly different color when clicked */
+  }
+  

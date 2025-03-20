@@ -1,0 +1,33 @@
+*{
+    background-color: skyblue;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+div{
+    color: #fff;
+}
+button{
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+h1{
+    font-size:50px;
+
+}
+
+b{
+    background-color: black;
+    font-size: 50px;
+
+}

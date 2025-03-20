@@ -1,0 +1,70 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which of the following is not a Java keyword?",
+        "options": ["class", "interface", "extends", "main"],
+        "answer": "main"
+      },
+      {
+        "id": 2,
+        "question": "Which data type is used to create a variable that stores text?",
+        "options": ["int", "String", "boolean", "char"],
+        "answer": "String"
+      },
+      {
+        "id": 3,
+        "question": "What is the size of an int data type in Java?",
+        "options": ["4 bytes", "2 bytes", "8 bytes", "1 byte"],
+        "answer": "4 bytes"
+      },
+      {
+        "id": 4,
+        "question": "Which method is used to print output in Java?",
+        "options": ["System.out.print()", "Console.log()", "print()", "printf()"],
+        "answer": "System.out.print()"
+      },
+      {
+        "id": 5,
+        "question": "Which keyword is used to inherit a class in Java?",
+        "options": ["implement", "extends", "inherits", "super"],
+        "answer": "extends"
+      },
+      {
+        "id": 6,
+        "question": "What is the default value of a boolean variable in Java?",
+        "options": ["true", "false", "0", "null"],
+        "answer": "false"
+      },
+      {
+        "id": 7,
+        "question": "Which of the following is a marker interface?",
+        "options": ["Runnable", "Cloneable", "Serializable", "Comparable"],
+        "answer": "Serializable"
+      },
+      {
+        "id": 8,
+        "question": "What does the 'final' keyword in Java mean?",
+        "options": [
+          "The variable value can be changed",
+          "The method cannot be overridden",
+          "The class can be inherited",
+          "The object can be modified"
+        ],
+        "answer": "The method cannot be overridden"
+      },
+      {
+        "id": 9,
+        "question": "Which package contains the core Java classes?",
+        "options": ["java.lang", "java.util", "java.io", "java.net"],
+        "answer": "java.lang"
+      },
+      {
+        "id": 10,
+        "question": "Which operator is used to concatenate strings in Java?",
+        "options": ["+", "&", "&&", "."],
+        "answer": "+"
+      }
+    ]
+  }
+  

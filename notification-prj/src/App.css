@@ -1,0 +1,73 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.toast-container{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+.toast{
+    background-color: aquamarine;
+    padding: 10px 15px;
+    min-width: 500px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    animation: slide 3s 1;
+    margin-bottom: 15px;
+
+}
+.toast span{
+    font-size: 25px;
+    cursor: pointer;
+}
+.button-container{
+    display: flex;
+    gap: 15px;
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 3px;
+
+
+}
+
+@keyframes slide{
+    0%{
+        transform: translate(100%);
+
+    }
+    
+    100%{
+        transform: translate(0%);
+    }
+}
+
+.success{
+    background-color: green;
+
+}
+.warning{
+    background-color: orange;
+}
+.info{
+    background-color: rgba(19,19,104);
+}
+.danger{
+    background-color: red;
+}
